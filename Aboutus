@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Over Ons</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9fafb;
+            color: #333;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100%;
+            text-align: center;
+            margin-top: 0;
+        }
+
+        /* Header stijlen */
+        .header {
+            width: 100%;
+            background-color: #4c6ef5;
+            color: #fff;
+            padding: 15px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+
+        .header a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1.1rem;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .header a:hover {
+            background-color: #2d4dff;
+        }
+
+        /* Hero sectie */
+        .hero {
+            background-color: #4c6ef5;
+            color: #fff;
+            padding: 6rem 2rem;
+            width: 100%;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Hoofdinhoud van de pagina */
+        .about-container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            padding: 3rem;
+            width: 80%;
+            max-width: 900px;
+            margin-top: 10rem; /* Om ruimte te creëren voor de fixed header */
+            text-align: left;
+        }
+
+        .about-container h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+
+        .about-container p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .about-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 2rem;
+        }
+
+        /* Over ons sectie */
+        .team-section {
+            background-color: #f3f4f6;
+            padding: 4rem 2rem;
+            width: 100%;
+            text-align: center;
+        }
+
+        .team-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+
+        .team-section p {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .team-members {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .team-member {
+            width: 250px;
+            text-align: center;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .team-member img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+        }
+
+        .team-member h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .team-member p {
+            font-size: 1rem;
+            color: #777;
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+        }
+
+        /* Footer sectie */
+        .footer {
+            background-color: #4c6ef5;
+            color: #fff;
+            padding: 1.5rem 0;
+            width: 100%;
+            text-align: center;
+            font-size: 1rem;
+        }
+
+        .footer p {
+            margin: 0;
+        }
+
+        /* Extra styling voor responsiviteit */
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                font-size: 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .about-container {
+                padding: 2rem;
+                width: 90%;
+                margin-top: 6rem;
+            }
+
+            .team-members {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .team-member {
+                width: 200px;
+            }
+
+            .team-section h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header met navigatie -->
+    <div class="header">
+        <a href="#">Home</a>
+        <a href="#">About Us</a>
+    </div>
+
+    <!-- Hero sectie -->
+    <div class="hero">
+        <h1>Over Ons</h1>
+        <p>Wij zijn een gepassioneerd team dat zich inzet voor de toekomst van educatie en technologie. Ontdek meer over wie wij zijn en wat wij doen.</p>
+    </div>
+
+    <!-- Hoofdinhoud van de pagina -->
+    <div class="about-container">
+        <h1>Wie Wij Zijn</h1>
+        <p>Ons bedrijf werd opgericht met de visie om technologie toegankelijk te maken voor iedereen. Wij geloven dat technologie de manier waarop we leren en werken moet verbeteren, en we streven ernaar om oplossingen te bieden die zowel eenvoudig als krachtig zijn. Ons team bestaat uit experts uit verschillende disciplines, die samenwerken om innovaties te creëren die de toekomst veranderen.</p>
+
+        <!-- Voeg een afbeelding toe -->
+        <img src="ontdek-hoe-je-team-simpel-aan-hun-ontwikkeling-kan-werken-1536x1024.jpg" alt="Ons team" class="about-image">
+    </div>
+
+    <!-- Team sectie -->
+    <div class="team-section">
+        <h2>Ons Team</h2>
+        <p>We zijn een klein, maar gepassioneerd team van ontwerpers, ontwikkelaars en strategie-experts. Samen werken we hard om de best mogelijke ervaring voor onze gebruikers te creëren.</p>
+        <div class="team-members">
+            <div class="team-member">
+                <img src="1240.jpeg" alt="Teamlid 1">
+                <h3>Jan de Vries</h3>
+                <p>Oprichter & CEO</p>
+            </div>
+            <div class="team-member">
+                <img src="1603024638942.jpg" alt="Teamlid 2">
+                <h3>Lisa Jansen</h3>
+                <p>Lead Ontwikkelaar</p>
+            </div>
+            <div class="team-member">
+                <img src="lisa-donia-e1667220672383.png" alt="Teamlid 3">
+                <h3>Tom Bakker</h3>
+                <p>UX/UI Designer</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2025 Bedrijfnaam. Alle rechten voorbehouden.</p>
+    </div>
+
+</body>
+</html>
